@@ -258,8 +258,7 @@ const handleSwipe = () => {
 ======================================== */
 
 .book-reader {
-  height: 90vh;
-  width: 110%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   background: #000000;
