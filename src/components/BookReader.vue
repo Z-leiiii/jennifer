@@ -258,12 +258,13 @@ const handleSwipe = () => {
 ======================================== */
 
 .book-reader {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   background: #000000;
   font-family: 'Times New Roman', 'Georgia', serif;
   color: #ffffff;
+  overflow: hidden;
 }
 
 
@@ -322,7 +323,7 @@ const handleSwipe = () => {
 
   width: 90%;
   max-width: 500px;
-  height: 50vh;
+  height: 70vh;
 
   background: #000000;
 
@@ -331,6 +332,8 @@ const handleSwipe = () => {
   padding: 1.5rem;
 
   overflow-y: auto;
+
+  overflow-x: hidden;
 }
 
 .table-of-contents h2 {
@@ -442,7 +445,7 @@ const handleSwipe = () => {
 .book-content {
   flex: 1;
 
-  padding: 2.5rem 2rem;
+  padding: 2rem 2rem;
 
   max-width: 800px;
 
@@ -455,6 +458,10 @@ const handleSwipe = () => {
   flex-direction: column;
 
   justify-content: center;
+
+  overflow-y: auto;
+
+  overflow-x: hidden;
 }
 
 /* ========================================
@@ -499,6 +506,12 @@ const handleSwipe = () => {
   white-space: pre-line;
 
   font-family: 'Times New Roman', 'Georgia', serif;
+
+  overflow-y: auto;
+
+  overflow-x: hidden;
+
+  max-height: calc(100vh - 4rem);
 }
 
 /* ========================================
@@ -513,6 +526,10 @@ const handleSwipe = () => {
   align-items: center;
 
   width: 100%;
+
+  height: 100%;
+
+  overflow: hidden;
 }
 
 .cover-image {
@@ -520,9 +537,11 @@ const handleSwipe = () => {
 
   max-width: 800px;
 
-  max-height: 70vh;
+  max-height: 90vh;
 
   object-fit: contain;
+
+  object-position: center;
 }
 
 /* ========================================
@@ -544,14 +563,15 @@ const handleSwipe = () => {
   }
 
   .poem-text {
-    font-size: 0.9rem;
-    line-height: 1.6;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    max-height: calc(100vh - 3rem);
   }
 
   .table-of-contents {
     width: 92%;
     max-width: 400px;
-    height: 70vh;
+    height: 80vh;
     padding: 1rem;
   }
 
@@ -569,7 +589,7 @@ const handleSwipe = () => {
   }
 
   .cover-image {
-    max-height: 50vh;
+    max-height: 85vh;
   }
 }
 
@@ -583,23 +603,25 @@ const handleSwipe = () => {
   }
 
   .book-content {
-    padding: 1.5rem 1rem;
+    padding: 1.25rem 1rem;
     width: 95%;
   }
 
   .poem-text {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-height: calc(100vh - 3.5rem);
   }
 
   .table-of-contents {
     width: 95%;
     max-width: 500px;
-    height: 60vh;
+    height: 75vh;
     padding: 1.5rem;
   }
 
   .cover-image {
-    max-height: 60vh;
+    max-height: 85vh;
   }
 }
 
@@ -607,23 +629,25 @@ const handleSwipe = () => {
 @media (min-width: 769px) and (max-width: 1024px) {
 
   .book-content {
-    padding: 2rem 1.5rem;
+    padding: 1.5rem 1.5rem;
     width: 90%;
   }
 
   .poem-text {
-    font-size: 1.05rem;
+    font-size: 1rem;
+    line-height: 1.7;
+    max-height: calc(100vh - 4rem);
   }
 
   .table-of-contents {
     width: 80%;
     max-width: 550px;
-    height: 55vh;
+    height: 70vh;
     padding: 1.75rem;
   }
 
   .cover-image {
-    max-height: 65vh;
+    max-height: 88vh;
   }
 }
 
@@ -631,24 +655,26 @@ const handleSwipe = () => {
 @media (min-width: 1025px) {
 
   .book-content {
-    padding: 3rem 2rem;
+    padding: 2rem 2rem;
     width: 85%;
     max-width: 900px;
   }
 
   .poem-text {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-height: calc(100vh - 5rem);
   }
 
   .table-of-contents {
     width: 70%;
     max-width: 600px;
-    height: 50vh;
+    height: 65vh;
     padding: 2rem;
   }
 
   .cover-image {
-    max-height: 75vh;
+    max-height: 90vh;
   }
 }
 </style>
