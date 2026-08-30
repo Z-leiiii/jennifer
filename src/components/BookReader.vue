@@ -442,13 +442,13 @@ const handleSwipe = () => {
 .book-content {
   flex: 1;
 
-  padding: 3rem;
+  padding: 2.5rem 2rem;
 
   max-width: 800px;
 
   margin: 0 auto;
 
-  width: 90%;
+  width: 88%;
 
   display: flex;
 
@@ -526,15 +526,59 @@ const handleSwipe = () => {
 }
 
 /* ========================================
-   MOBILE
+   RESPONSIVE
 ======================================== */
 
-@media (max-width: 768px) {
+/* Extra small screens */
+@media (max-width: 480px) {
 
   .toc-button-floating {
     top: 0.5rem;
     right: 0.5rem;
+    padding: 0.4rem;
+  }
 
+  .book-content {
+    padding: 1rem 0.75rem;
+    width: 92%;
+  }
+
+  .poem-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .table-of-contents {
+    width: 92%;
+    max-width: 400px;
+    height: 70vh;
+    padding: 1rem;
+  }
+
+  .table-of-contents h2 {
+    font-size: 1rem;
+  }
+
+  .chapter-number {
+    font-size: 0.75rem;
+    min-width: 1.5rem;
+  }
+
+  .chapter-title {
+    font-size: 0.85rem;
+  }
+
+  .cover-image {
+    max-height: 50vh;
+  }
+}
+
+/* Small screens */
+@media (min-width: 481px) and (max-width: 768px) {
+
+  .toc-button-floating {
+    top: 0.5rem;
+    right: 0.5rem;
     padding: 0.5rem;
   }
 
@@ -551,13 +595,60 @@ const handleSwipe = () => {
     width: 95%;
     max-width: 500px;
     height: 60vh;
-
     padding: 1.5rem;
   }
 
   .cover-image {
     max-height: 60vh;
   }
+}
 
+/* Medium screens */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .book-content {
+    padding: 2rem 1.5rem;
+    width: 90%;
+  }
+
+  .poem-text {
+    font-size: 1.05rem;
+  }
+
+  .table-of-contents {
+    width: 80%;
+    max-width: 550px;
+    height: 55vh;
+    padding: 1.75rem;
+  }
+
+  .cover-image {
+    max-height: 65vh;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+
+  .book-content {
+    padding: 3rem 2rem;
+    width: 85%;
+    max-width: 900px;
+  }
+
+  .poem-text {
+    font-size: 1.15rem;
+  }
+
+  .table-of-contents {
+    width: 70%;
+    max-width: 600px;
+    height: 50vh;
+    padding: 2rem;
+  }
+
+  .cover-image {
+    max-height: 75vh;
+  }
 }
 </style>
