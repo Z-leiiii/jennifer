@@ -15,14 +15,6 @@ const currentChapter = computed(() => {
   return chapters[currentChapterIndex.value]!
 })
 
-const progress = computed(() => {
-  if (chapters.length === 0) {
-    return 0
-  }
-
-  return ((currentChapterIndex.value + 1) / chapters.length) * 100
-})
-
 // ========================================
 // CHAPTER NAVIGATION
 // ========================================
@@ -101,16 +93,6 @@ const handleSwipe = () => {
 <template>
   <div class="book-reader">
 
-    <!-- ========================================
-         PROGRESS BAR
-    ========================================= -->
-
-    <div class="progress-bar">
-      <div
-        class="progress-fill"
-        :style="{ width: progress + '%' }"
-      ></div>
-    </div>
 
     <!-- ========================================
          FLOATING TOC BUTTON
@@ -284,25 +266,6 @@ const handleSwipe = () => {
   color: #ffffff;
 }
 
-/* ========================================
-   PROGRESS BAR
-======================================== */
-
-.progress-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: rgba(255, 255, 255, 0.1);
-  z-index: 100;
-}
-
-.progress-fill {
-  height: 100%;
-  background: rgba(255, 255, 255, 0.8);
-  transition: width 0.3s ease;
-}
 
 /* ========================================
    FLOATING TOC BUTTON
@@ -314,31 +277,23 @@ const handleSwipe = () => {
   top: 1rem;
   right: 1rem;
 
-  background: rgba(40, 40, 40, 0.95);
+  background: none;
 
-  border: 2px solid rgba(255, 255, 255, 0.5);
-
-  border-radius: 50%;
+  border: none;
 
   cursor: pointer;
 
-  padding: 0.75rem;
+  padding: 0.5rem;
 
-  color: rgba(255, 255, 255, 0.95);
+  color: rgba(255, 255, 255, 0.6);
 
-  transition: all 0.2s;
+  transition: color 0.2s;
 
   z-index: 100;
-
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .toc-button-floating:hover {
-  background: rgba(60, 60, 60, 0.95);
-
   color: rgba(255, 255, 255, 1);
-
-  border-color: rgba(255, 255, 255, 0.8);
 }
 
 /* ========================================
@@ -353,7 +308,7 @@ const handleSwipe = () => {
   right: 0;
   bottom: 0;
 
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
 
   z-index: 150;
 }
@@ -366,25 +321,22 @@ const handleSwipe = () => {
   transform: translate(-50%, -50%);
 
   width: 90%;
-  max-width: 600px;
+  max-width: 500px;
   height: 50vh;
 
-  background: rgba(0, 0, 0, 0.98);
+  background: #000000;
 
   z-index: 200;
 
-  padding: 2rem;
+  padding: 1.5rem;
 
   overflow-y: auto;
-
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .table-of-contents h2 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
 
   margin: 0;
 
@@ -400,7 +352,11 @@ const handleSwipe = () => {
 
   justify-content: space-between;
 
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+
+  padding-bottom: 0.5rem;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .toc-close-button {
@@ -410,15 +366,15 @@ const handleSwipe = () => {
 
   cursor: pointer;
 
-  padding: 0.5rem;
+  padding: 0.25rem;
 
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.5);
 
   transition: color 0.2s;
 }
 
 .toc-close-button:hover {
-  color: rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* ========================================
@@ -430,35 +386,29 @@ const handleSwipe = () => {
 
   align-items: center;
 
-  gap: 1.5rem;
+  gap: 1rem;
 
   width: 100%;
 
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 0;
 
   background: none;
 
   border: none;
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
   cursor: pointer;
 
   text-align: left;
-
-  transition: background 0.2s;
 
   font-family: 'Times New Roman', 'Georgia', serif;
 }
 
 .toc-item:hover {
-  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .toc-item.active {
-  background: rgba(255, 255, 255, 0.1);
-
-  border-left: 3px solid rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 1);
 }
 
 /* ========================================
@@ -466,9 +416,9 @@ const handleSwipe = () => {
 ======================================== */
 
 .chapter-number {
-  font-size: 1.2rem;
+  font-size: 0.85rem;
 
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.4);
 
   font-weight: normal;
 
@@ -480,9 +430,9 @@ const handleSwipe = () => {
 ======================================== */
 
 .chapter-title {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* ========================================
@@ -512,7 +462,7 @@ const handleSwipe = () => {
 ======================================== */
 
 .chapter {
-  animation: fadeIn 0.5s ease;
+  animation: fadeIn 0.3s ease;
 }
 
 /* ========================================
@@ -523,7 +473,7 @@ const handleSwipe = () => {
   from {
     opacity: 0;
 
-    transform: translateY(20px);
+    transform: translateY(10px);
   }
 
   to {
@@ -534,33 +484,15 @@ const handleSwipe = () => {
 }
 
 /* ========================================
-   CHAPTER TITLE
-======================================== */
-
-.chapter-title {
-  font-size: 2.5rem;
-
-  color: #ffffff;
-
-  margin-bottom: 2rem;
-
-  font-weight: normal;
-
-  text-align: center;
-
-  letter-spacing: 0.1em;
-}
-
-/* ========================================
    POEM
 ======================================== */
 
 .poem-text {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 
-  line-height: 2;
+  line-height: 1.8;
 
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.85);
 
   text-align: center;
 
@@ -591,8 +523,6 @@ const handleSwipe = () => {
   max-height: 70vh;
 
   object-fit: contain;
-
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 /* ========================================
@@ -611,10 +541,6 @@ const handleSwipe = () => {
   .book-content {
     padding: 1.5rem 1rem;
     width: 95%;
-  }
-
-  .chapter-title {
-    font-size: 1.5rem;
   }
 
   .poem-text {
