@@ -1288,7 +1288,7 @@ It simply shows up.`
  I'm torn between staying and leaving,
 I feel the weight you carry,
 pressure from your family,
-fear of rejection due to love that wears to shes
+fear of rejection due to love that wears two shes
 
 It's true, I'm afraid of losing you,
 but I'm more terrified of you losing yourself,
