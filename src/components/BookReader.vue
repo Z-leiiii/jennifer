@@ -252,6 +252,33 @@ const handleSwipe = () => {
   </div>
 </template>
 
+<!-- ========================================
+     GLOBAL RESET (unscoped)
+     This removes the browser's default body
+     margin, which is what actually causes the
+     "space around the page" you were seeing.
+     Scoped styles below can never reach
+     html/body, so this block has to be global.
+======================================== -->
+<style>
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background: #000000;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+</style>
+
 <style scoped>
 /* ========================================
    BOOK READER
@@ -259,6 +286,10 @@ const handleSwipe = () => {
 
 .book-reader {
   height: 100vh;
+  height: 100dvh; /* mobile-safe viewport, overrides line above where supported */
+  width: 100%;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   background: #000000;
@@ -324,6 +355,7 @@ const handleSwipe = () => {
   width: 90%;
   max-width: 500px;
   height: 70vh;
+  height: 70dvh;
 
   background: #000000;
 
@@ -448,9 +480,9 @@ const handleSwipe = () => {
 
   padding: 0;
 
-  max-width: 100%;
-
   margin: 0;
+
+  max-width: 100%;
 
   width: 100%;
 
@@ -471,6 +503,8 @@ const handleSwipe = () => {
 
 .chapter {
   animation: fadeIn 0.3s ease;
+  width: 100%;
+  margin: 0;
 }
 
 /* ========================================
@@ -513,6 +547,11 @@ const handleSwipe = () => {
   overflow-x: hidden;
 
   max-height: 100vh;
+  max-height: 100dvh;
+
+  width: 100%;
+
+  margin: 0;
 
   padding: 2rem;
 }
@@ -535,6 +574,8 @@ const handleSwipe = () => {
   overflow: hidden;
 
   padding: 0;
+
+  margin: 0;
 }
 
 .cover-image {
@@ -543,10 +584,13 @@ const handleSwipe = () => {
   max-width: 100%;
 
   max-height: 100vh;
+  max-height: 100dvh;
 
   object-fit: contain;
 
   object-position: center;
+
+  display: block;
 }
 
 /* ========================================
@@ -571,6 +615,7 @@ const handleSwipe = () => {
     font-size: 0.85rem;
     line-height: 1.5;
     max-height: 100vh;
+    max-height: 100dvh;
     padding: 1rem;
   }
 
@@ -578,6 +623,7 @@ const handleSwipe = () => {
     width: 92%;
     max-width: 400px;
     height: 80vh;
+    height: 80dvh;
     padding: 1rem;
   }
 
@@ -596,6 +642,7 @@ const handleSwipe = () => {
 
   .cover-image {
     max-height: 85vh;
+    max-height: 85dvh;
   }
 }
 
@@ -617,6 +664,7 @@ const handleSwipe = () => {
     font-size: 0.95rem;
     line-height: 1.6;
     max-height: 100vh;
+    max-height: 100dvh;
     padding: 1.5rem;
   }
 
@@ -624,11 +672,13 @@ const handleSwipe = () => {
     width: 95%;
     max-width: 500px;
     height: 75vh;
+    height: 75dvh;
     padding: 1.5rem;
   }
 
   .cover-image {
     max-height: 85vh;
+    max-height: 85dvh;
   }
 }
 
@@ -644,6 +694,7 @@ const handleSwipe = () => {
     font-size: 1rem;
     line-height: 1.7;
     max-height: 100vh;
+    max-height: 100dvh;
     padding: 2rem;
   }
 
@@ -651,11 +702,13 @@ const handleSwipe = () => {
     width: 80%;
     max-width: 550px;
     height: 70vh;
+    height: 70dvh;
     padding: 1.75rem;
   }
 
   .cover-image {
     max-height: 88vh;
+    max-height: 88dvh;
   }
 }
 
@@ -672,6 +725,7 @@ const handleSwipe = () => {
     font-size: 1.1rem;
     line-height: 1.8;
     max-height: 100vh;
+    max-height: 100dvh;
     padding: 2.5rem;
   }
 
@@ -679,11 +733,13 @@ const handleSwipe = () => {
     width: 70%;
     max-width: 600px;
     height: 65vh;
+    height: 65dvh;
     padding: 2rem;
   }
 
   .cover-image {
     max-height: 90vh;
+    max-height: 90dvh;
   }
 }
 </style>
