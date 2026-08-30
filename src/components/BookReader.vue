@@ -113,59 +113,44 @@ const handleSwipe = () => {
     </div>
 
     <!-- ========================================
-         HEADER
+         FLOATING TOC BUTTON
     ========================================= -->
 
-    <header class="book-header">
-
-      <!-- Table of Contents Button -->
-      <button
-        class="toc-button"
-        @click="toggleTableOfContents"
-        aria-label="Open table of contents"
+    <button
+      class="toc-button-floating"
+      @click="toggleTableOfContents"
+      aria-label="Open table of contents"
+    >
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
       >
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-        >
-          <line
-            x1="3"
-            y1="12"
-            x2="21"
-            y2="12"
-          ></line>
+        <line
+          x1="3"
+          y1="12"
+          x2="21"
+          y2="12"
+        ></line>
 
-          <line
-            x1="3"
-            y1="6"
-            x2="21"
-            y2="6"
-          ></line>
+        <line
+          x1="3"
+          y1="6"
+          x2="21"
+          y2="6"
+        ></line>
 
-          <line
-            x1="3"
-            y1="18"
-            x2="21"
-            y2="18"
-          ></line>
-        </svg>
-      </button>
-
-      <!-- Book Title -->
-      <h1 class="book-title">
-        UNSAID
-      </h1>
-
-      <!-- Chapter Indicator -->
-      <span class="chapter-indicator">
-        {{ currentChapterIndex + 1 }} / {{ chapters.length }}
-      </span>
-
-    </header>
+        <line
+          x1="3"
+          y1="18"
+          x2="21"
+          y2="18"
+        ></line>
+      </svg>
+    </button>
 
     <!-- ========================================
          TABLE OF CONTENTS
@@ -173,35 +158,74 @@ const handleSwipe = () => {
 
     <div
       v-if="showTableOfContents"
-      class="table-of-contents"
+      class="toc-backdrop"
+      @click="toggleTableOfContents"
     >
 
-      <h2>
-        Table of Contents
-      </h2>
-
-      <button
-        v-for="(chapter, index) in chapters"
-        :key="chapter.id"
-        class="toc-item"
-        :class="{
-          active: index === currentChapterIndex
-        }"
-        @click="goToChapter(index)"
+      <div
+        class="table-of-contents"
+        @click.stop
       >
 
-        <span
-          v-if="chapter.id > 0"
-          class="chapter-number"
+        <div class="toc-header">
+          <h2>
+            Table of Contents
+          </h2>
+
+          <button
+            class="toc-close-button"
+            @click="toggleTableOfContents"
+            aria-label="Close table of contents"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line
+                x1="18"
+                y1="6"
+                x2="6"
+                y2="18"
+              ></line>
+
+              <line
+                x1="6"
+                y1="6"
+                x2="18"
+                y2="18"
+              ></line>
+            </svg>
+          </button>
+        </div>
+
+        <button
+          v-for="(chapter, index) in chapters"
+          :key="chapter.id"
+          class="toc-item"
+          :class="{
+            active: index === currentChapterIndex
+          }"
+          @click="goToChapter(index)"
         >
-          {{ chapter.id }}
-        </span>
 
-        <span class="chapter-title">
-          {{ chapter.title }}
-        </span>
+          <span
+            v-if="chapter.id > 0"
+            class="chapter-number"
+          >
+            {{ chapter.id }}
+          </span>
 
-      </button>
+          <span class="chapter-title">
+            {{ chapter.title }}
+          </span>
+
+        </button>
+
+      </div>
 
     </div>
 
@@ -281,33 +305,105 @@ const handleSwipe = () => {
 }
 
 /* ========================================
-   HEADER
+   FLOATING TOC BUTTON
 ======================================== */
 
-.book-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.toc-button-floating {
+  position: fixed;
 
-  padding: 2rem 3rem;
+  top: 1rem;
+  right: 1rem;
 
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(40, 40, 40, 0.95);
 
-  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.5);
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
 
-  position: sticky;
-  top: 0;
+  cursor: pointer;
 
-  z-index: 50;
+  padding: 0.75rem;
+
+  color: rgba(255, 255, 255, 0.95);
+
+  transition: all 0.2s;
+
+  z-index: 100;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.toc-button-floating:hover {
+  background: rgba(60, 60, 60, 0.95);
+
+  color: rgba(255, 255, 255, 1);
+
+  border-color: rgba(255, 255, 255, 0.8);
 }
 
 /* ========================================
-   TOC BUTTON
+   TABLE OF CONTENTS
 ======================================== */
 
-.toc-button {
+.toc-backdrop {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  z-index: 150;
+}
+
+.table-of-contents {
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 90%;
+  max-width: 600px;
+  height: 50vh;
+
+  background: rgba(0, 0, 0, 0.98);
+
+  z-index: 200;
+
+  padding: 2rem;
+
+  overflow-y: auto;
+
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.table-of-contents h2 {
+  font-size: 1.5rem;
+
+  color: #ffffff;
+
+  margin: 0;
+
+  font-weight: normal;
+
+  letter-spacing: 0.1em;
+}
+
+.toc-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 1rem;
+}
+
+.toc-close-button {
   background: none;
 
   border: none;
@@ -321,71 +417,8 @@ const handleSwipe = () => {
   transition: color 0.2s;
 }
 
-.toc-button:hover {
+.toc-close-button:hover {
   color: rgba(255, 255, 255, 1);
-}
-
-/* ========================================
-   BOOK TITLE
-======================================== */
-
-.book-title {
-  font-size: 1.5rem;
-
-  font-weight: normal;
-
-  color: #ffffff;
-
-  margin: 0;
-
-  letter-spacing: 0.15em;
-
-  font-family: 'Times New Roman', serif;
-}
-
-/* ========================================
-   CHAPTER INDICATOR
-======================================== */
-
-.chapter-indicator {
-  font-size: 0.9rem;
-
-  color: rgba(255, 255, 255, 0.6);
-
-  font-style: italic;
-}
-
-/* ========================================
-   TABLE OF CONTENTS
-======================================== */
-
-.table-of-contents {
-  position: fixed;
-
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  background: rgba(0, 0, 0, 0.98);
-
-  z-index: 200;
-
-  padding: 6rem 3rem 3rem;
-
-  overflow-y: auto;
-}
-
-.table-of-contents h2 {
-  font-size: 2rem;
-
-  color: #ffffff;
-
-  margin-bottom: 2rem;
-
-  font-weight: normal;
-
-  letter-spacing: 0.1em;
 }
 
 /* ========================================
@@ -568,12 +601,11 @@ const handleSwipe = () => {
 
 @media (max-width: 768px) {
 
-  .book-header {
-    padding: 1rem;
-  }
+  .toc-button-floating {
+    top: 0.5rem;
+    right: 0.5rem;
 
-  .book-title {
-    font-size: 1.1rem;
+    padding: 0.5rem;
   }
 
   .book-content {
@@ -590,7 +622,11 @@ const handleSwipe = () => {
   }
 
   .table-of-contents {
-    padding: 4rem 1rem 1rem;
+    width: 95%;
+    max-width: 500px;
+    height: 60vh;
+
+    padding: 1.5rem;
   }
 
   .cover-image {
