@@ -445,13 +445,13 @@ const handleSwipe = () => {
 .book-content {
   flex: 1;
 
-  padding: 2rem 2rem;
+  padding: 0;
 
-  max-width: 800px;
+  max-width: 100%;
 
-  margin: 0 auto;
+  margin: 0;
 
-  width: 88%;
+  width: 100%;
 
   display: flex;
 
@@ -511,7 +511,9 @@ const handleSwipe = () => {
 
   overflow-x: hidden;
 
-  max-height: calc(100vh - 4rem);
+  max-height: 100vh;
+
+  padding: 2rem;
 }
 
 /* ========================================
@@ -530,14 +532,16 @@ const handleSwipe = () => {
   height: 100%;
 
   overflow: hidden;
+
+  padding: 0;
 }
 
 .cover-image {
   width: 100%;
 
-  max-width: 800px;
+  max-width: 100%;
 
-  max-height: 90vh;
+  max-height: 100vh;
 
   object-fit: contain;
 
@@ -558,14 +562,15 @@ const handleSwipe = () => {
   }
 
   .book-content {
-    padding: 1rem 0.75rem;
-    width: 92%;
+    padding: 0;
+    width: 100%;
   }
 
   .poem-text {
     font-size: 0.85rem;
     line-height: 1.5;
-    max-height: calc(100vh - 3rem);
+    max-height: 100vh;
+    padding: 1rem;
   }
 
   .table-of-contents {
@@ -603,14 +608,15 @@ const handleSwipe = () => {
   }
 
   .book-content {
-    padding: 1.25rem 1rem;
-    width: 95%;
+    padding: 0;
+    width: 100%;
   }
 
   .poem-text {
     font-size: 0.95rem;
     line-height: 1.6;
-    max-height: calc(100vh - 3.5rem);
+    max-height: 100vh;
+    padding: 1.5rem;
   }
 
   .table-of-contents {
@@ -629,14 +635,15 @@ const handleSwipe = () => {
 @media (min-width: 769px) and (max-width: 1024px) {
 
   .book-content {
-    padding: 1.5rem 1.5rem;
-    width: 90%;
+    padding: 0;
+    width: 100%;
   }
 
   .poem-text {
     font-size: 1rem;
     line-height: 1.7;
-    max-height: calc(100vh - 4rem);
+    max-height: 100vh;
+    padding: 2rem;
   }
 
   .table-of-contents {
@@ -655,15 +662,16 @@ const handleSwipe = () => {
 @media (min-width: 1025px) {
 
   .book-content {
-    padding: 2rem 2rem;
-    width: 85%;
-    max-width: 900px;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
   }
 
   .poem-text {
     font-size: 1.1rem;
     line-height: 1.8;
-    max-height: calc(100vh - 5rem);
+    max-height: 100vh;
+    padding: 2.5rem;
   }
 
   .table-of-contents {

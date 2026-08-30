@@ -483,36 +483,9 @@ two hearts, awake,
 unafraid to keep choosing tenderness.
 Today, and today after.`
   },
+  
   {
     id: 12,
-    title: "Dear Love",
-    content: `Dear love of mine,
-
-
-I still cherish the thought of you,
-how you look, how you move, how your voice lingers in my mind.
-Even when the edges blur, I hold on to it—
-to you—because it feels alive, real, and worth keeping.
-
-
-I don't want to let it slip away.
-I don't want you to be just a name, a stranger I only imagined.
-I want to know you, fully,
-and I want you to know me, too.
-
-
-With this letter, I am not letting go.
-I am letting my heart speak plainly:
-I want to stay,
-I want us,
-I want to see where we can go together.
-
-
-Dear love of mine,
-Stay.`
-  },
-  {
-    id: 13,
     title: "No Chase",
     content: `I don't have to chase you.
 
@@ -536,7 +509,7 @@ again and again
 without needing a reason.`
   },
   {
-    id: 14,
+    id: 13,
     title: "Home",
     content: `You are not a place I pass through.
 
@@ -557,7 +530,7 @@ and knowing
 I don't have to leave.`
   },
   {
-    id: 15,
+    id: 14,
     title: "Reach You",
     content: `Tell me where it's easiest
 to reach you.
@@ -576,7 +549,7 @@ where to stand
 and stay.`
   },
   {
-    id: 16,
+    id: 15,
     title: "I Love You",
     content: `So let me say it plainly,
 without metaphors to hide behind,
@@ -646,7 +619,7 @@ I love you.
 And I am not going anywhere.`
   },
   {
-    id: 17,
+    id: 16,
     title: "Your Heart",
     content: `Give me your heart,
 and I will hold it softly,
@@ -662,7 +635,7 @@ With me,
 Love will always have a home.`
   },
   {
-    id: 18,
+    id: 17,
     title: "Beats Louder",
     content: `All things aside,
 my heart finds you easily,
@@ -678,7 +651,7 @@ And when yours meets mine,
 it feels like certainty.`
   },
   {
-    id: 19,
+    id: 18,
     title: "Light Love",
     content: `You deserve a love
 that feels light on your shoulders,
@@ -693,36 +666,9 @@ that grows brighter every day.
 And I hope
 I am the one who gives you that kind of love.`
   },
+  
   {
-    id: 20,
-    title: "Jealousy",
-    content: `I was never jealous of someone's past,
-but this, it feels different 
-it took me back to when you were not mine—
-when you were someone's special someone
-
-I was never jealous of someone's past
-because I know they have life before me.
-they have all the right to live, love, and be happy
-but this, it feels different
-
-Questions linger like
-How?
-Why?
-Of all people, why didn't you meet me first instead of her?
-and if you did, will things turn out different?
-
-I was never jealous of someone's past
-but what if time takes you to memories of her
-and those memories might take you away from me.
-will you choose to stay or let the memories guide you back to her?
-
-But it's true, really,
- I was never jealous of someone's past,
- not until I learned about yours.`
-  },
-  {
-    id: 21,
+    id: 19,
     title: "Confession",
     content: `I have a confession to make.
 
@@ -756,7 +702,7 @@ I fall for you
 all over again.`
   },
   {
-    id: 22,
+    id: 20,
     title: "Body Image",
     content: `My love for you hasn't changed.
 If anything, it's stronger now.
@@ -782,7 +728,7 @@ And every day, somehow,
 I love you even more.`
   },
   {
-    id: 23,
+    id: 21,
     title: "Home is You",
     content: `Home isn't a house.
 It's you sitting next to me
@@ -803,7 +749,7 @@ you'd understand —
 you're already enough.`
   },
   {
-    id: 24,
+    id: 22,
     title: "All Versions",
     content: `I don't just love you when you're happy.
 I love you when you're quiet.
@@ -825,7 +771,7 @@ Every version.
 Every season.`
   },
   {
-    id: 25,
+    id: 23,
     title: "Laughter",
     content: `You laugh at things no one else notices,
 make jokes I don't expect,
@@ -838,7 +784,7 @@ It's a lifeline.
 And I love you for it, more than you know.`
   },
   {
-    id: 26,
+    id: 24,
     title: "Tears",
     content: `Some days you doubt yourself.
 Some days you hide your smile.
@@ -853,7 +799,7 @@ on days like these.
 I'm here. Always.`
   },
   {
-    id: 27,
+    id: 25,
     title: "Small Things",
     content: `The little things —
 how you furrow your brows when you think,
@@ -867,7 +813,7 @@ And I love every single one of them.
 They make you unmistakably you.`
   },
   {
-    id: 28,
+    id: 26,
     title: "Noticed",
     content: `The way you brush your hair,
 the way your eyes shift when you're trying to remember,
@@ -880,7 +826,7 @@ Even the small, unnoticed things
 are part of why I love you endlessly.`
   },
   {
-    id: 29,
+    id: 27,
     title: "Details",
     content: `You notice the small details about me
 that no one else does.
@@ -894,7 +840,7 @@ because being seen by you
  feels like being understood.`
   },
   {
-    id: 30,
+    id: 28,
     title: "Trust",
     content: `I trust you with everything.
 Because you hold things— 
@@ -910,7 +856,7 @@ knowing that in your heart,
 I am safe, I am known, I am home.`
   },
   {
-    id: 31,
+    id: 29,
     title: "Myself",
     content: `You let me be myself.
 You listen without judgment,
@@ -923,7 +869,7 @@ A quiet kind that builds a life.
 And I love you for it more than words can say.`
   },
   {
-    id: 32,
+    id: 30,
     title: "Quiet",
     content: `It's not just the big days,
 the celebrations, the milestones,
@@ -938,7 +884,7 @@ That's where love feels strongest,
 and that's where I love you most.`
   },
   {
-    id: 33,
+    id: 31,
     title: "Remember",
     content: `You remember the things I forget.
 The small details, the tiny promises, the little notes of love.
@@ -950,7 +896,7 @@ and how much your love touches me
 even when you think I haven't seen.`
   },
   {
-    id: 34,
+    id: 32,
     title: "Voice",
     content: `When you speak softly at night,
 when you laugh quietly,
@@ -963,7 +909,7 @@ Even in the dark, I find you.
 And I love you there.`
   },
   {
-    id: 35,
+    id: 33,
     title: "Chase",
     content: `I watch you chase what you love.
 Every goal, every small step, every stubborn fight.
@@ -977,7 +923,7 @@ You inspire me.
 And I fall in love with that every day.`
   },
   {
-    id: 36,
+    id: 34,
     title: "Presence",
     content: `Sometimes you don't have to say anything.
 Just being near you
@@ -991,7 +937,7 @@ just you, sitting next to me.
 And that is everything.`
   },
   {
-    id: 37,
+    id: 35,
     title: "Stay the Same",
     content: `Life asks us to bend,
 to adjust, to hide parts of ourselves.
@@ -1006,7 +952,7 @@ not with an ideal,
 but with the real, messy, perfect you`
   },
   {
-    id: 38,
+    id: 36,
     title: "Strength",
     content: `You think you hide your strength,
 that you are small, unsure, fragile.
@@ -1023,7 +969,7 @@ and I will never stop loving
 the real, confident, true you.`
   },
   {
-    id: 39,
+    id: 37,
     title: "Freeze Time",
     content: `Sometimes, I watch you,
 and everything else fades.
@@ -1041,7 +987,7 @@ isn't loud or flashy —
 it's quiet, consistent , and alive.`
   },
   {
-    id: 40,
+    id: 38,
     title: "Real",
     content: `I notice the small things —
  curve, mark, line.
@@ -1054,7 +1000,7 @@ You just have to be you.
 And that is everything to me.`
   },
   {
-    id: 41,
+    id: 39,
     title: "Years",
     content: `I think about wrinkles, gray hairs,
 slow mornings, quiet nights.
@@ -1069,7 +1015,7 @@ I'll still hold your hand
 like it's the only one I want.`
   },
   {
-    id: 42,
+    id: 40,
     title: "Mornings",
     content: `I watch you start your day —
 the way your eyes open,
@@ -1084,7 +1030,7 @@ and makes even an ordinary day
 feel alive, hopeful, and full of love.`
   },
   {
-    id: 43,
+    id: 41,
     title: "First Person",
     content: `You're the first person
 who makes me feel calm just by being there.
@@ -1098,7 +1044,7 @@ And that's how I know
 this is real.`
   },
   {
-    id: 44,
+    id: 42,
     title: "Distance",
     content: `Not now.
 But maybe soon,
@@ -1131,7 +1077,7 @@ I will find my way home to you—
 every single time.`
   },
   {
-    id: 45,
+    id: 43,
     title: "Cooking",
     content: `I don't say this enough,
 but when you cook and call me to eat,
@@ -1166,7 +1112,7 @@ I appreciate you.
 More than I probably show.`
   },
   {
-    id: 46,
+    id: 44,
     title: "Care",
     content: `You cook,
 and it isn't just food.
@@ -1185,7 +1131,7 @@ one meal at a time,
 one shared moment at a time.`
   },
   {
-    id: 47,
+    id: 45,
     title: "Not a Love Letter",
     content: `I need to say this clearly, without drama.
 
@@ -1204,7 +1150,7 @@ I just want you to know that my love for you is not a trap. It's not a demand. I
 It's yours — whether I'm beside you or not`
   },
   {
-    id: 48,
+    id: 46,
     title: "Morning",
     content: `You didn't arrive in my life like fireworks.
 You came like morning—
@@ -1235,7 +1181,7 @@ I'd still pick the life
 where I get to call you my wife.`
   },
   {
-    id: 49,
+    id: 47,
     title: "Secret",
     content: `The world doesn't know us.
 Walls are listening.
@@ -1262,7 +1208,7 @@ and we can be together
 without fear.`
   },
   {
-    id: 50,
+    id: 48,
     title: "Hidden Love",
     content: `Love isn't always easy.
 Sometimes it's quiet, careful,
@@ -1287,7 +1233,7 @@ every day, in every way I can,
 because you are worth it.`
   },
   {
-    id: 51,
+    id: 49,
     title: "Endures",
     content: `This isn't a fleeting thing,
 something that will fade with time or change.
@@ -1303,7 +1249,7 @@ Nothing temporary can undo it.
 This is real, and it endures.`
   },
   {
-    id: 52,
+    id: 50,
     title: "Racing Thoughts",
     content: `Sometimes your thoughts circle like wind,
 and I watch, wanting to stop it,
@@ -1336,7 +1282,7 @@ Because love doesn't have to explain everything.
 It simply shows up.`
   },
   {
-    id: 53,
+    id: 51,
     title: "Torn",
     content: `Truth is
  I'm torn between staying and leaving,
@@ -1362,7 +1308,7 @@ I'll grieve it,
 but I'll understand.`
   },
   {
-    id: 54,
+    id: 52,
     title: "Let You Breathe",
     content: `I don't want you to leave.
 I want you here, 
@@ -1388,7 +1334,7 @@ not frozen, not begging,
 just open.`
   },
   {
-    id: 55,
+    id: 53,
     title: "Stay With Me",
     content: `I want you to stay, 
 not because everything is easy,
@@ -1402,7 +1348,7 @@ Even if it's hard, even if it's messy,
 I want you here.`
   },
   {
-    id: 56,
+    id: 54,
     title: "Protecting",
     content: `You once told me
 you were afraid of losing things
@@ -1417,7 +1363,7 @@ to believe that something gentle
 is still worth protecting.`
   },
   {
-    id: 57,
+    id: 55,
     title: "Can't Afford to Lose",
     content: `I was never afraid of losing someone I just met on a random Wednesday, but you—I can't afford to lose you.
 
@@ -1430,7 +1376,7 @@ In a world full of fleeting hellos, you've become my forever goodbye I never wan
 -Jennifer`
   },
   {
-    id: 58,
+    id: 56,
     title: "Hesitation",
     content: `I see the hesitation
 in the way your voice softens
@@ -1445,7 +1391,7 @@ Love should not feel
 like something chasing you`
   },
   {
-    id: 59,
+    id: 57,
     title: "Patient Love",
     content: `Some parts of our love
 live in the open—
@@ -1462,7 +1408,7 @@ Love does not become less true
 just because it learns how to be patient.`
   },
   {
-    id: 60,
+    id: 58,
     title: "Missing",
     content: `It's strange how normal things feel different
 when you're not around.
@@ -1493,7 +1439,7 @@ when you're close enough
 to share the ordinary days with you.`
   },
   {
-    id: 61,
+    id: 59,
     title: "More to Love",
     content: `The way you call yourself "too much,"
 I hear as "more to love,"
@@ -1519,7 +1465,7 @@ know that I disagree—
 every single time.`
   },
   {
-    id: 62,
+    id: 60,
     title: "Used to You",
     content: `I don't need a lot of words for this, 
 I've gotten used to you being there.
@@ -1546,7 +1492,7 @@ to mean it
 without needing to say too much.`
   },
   {
-    id: 63,
+    id: 61,
     title: "Show Up",
     content: `You don't have to ask me anything,
 I show up, I stay, I listen.
@@ -1564,7 +1510,7 @@ Just this quiet certainty
 that hasn't needed explaining.`
   },
   {
-    id: 64,
+    id: 62,
     title: "Don't Let Go",
     content: `It's kind of rare, you know, 
 finding someone who feels easy
@@ -1582,7 +1528,7 @@ No need to say much.
 Just don't let go yet.`
   },
   {
-    id: 65,
+    id: 63,
     title: "Boring Days",
     content: `you’re the one I think of
 in the middle of random days
@@ -1603,7 +1549,7 @@ yeah… I’m here
 and I’m not planning to leave`
   },
   {
-    id: 66,
+    id: 64,
     title: "Unexpected",
     content: `I met you somewhere I never expected,
 faces passing, empty air.
@@ -1624,7 +1570,7 @@ just real enough
 to keep going.`
   },
   {
-    id: 67,
+    id: 65,
     title: "Slow Days",
     content: `I'll stay, not just when it's easy,
 but when things get quiet and slow.
@@ -1646,7 +1592,7 @@ not the old version,
 but who you are right now.`
   },
   {
-    id: 68,
+    id: 66,
     title: "Simple and Real",
     content: `I didn't think much of it at first,
 just you sitting close,
@@ -1672,7 +1618,7 @@ simple and real,
 like I don't have to figure everything out alone anymore.`
   },
   {
-    id: 69,
+    id: 67,
     title: "I Choose You",
     content: `If you ask me who I choose,
 I won't take long to answer you.
@@ -1690,7 +1636,7 @@ if love is asked, I'll say it clear,
 you're the only one I keep near.`
   },
   {
-    id: 70,
+    id: 68,
     title: "Feels Like Home",
     content: `You feel like home to me,
 not a place, just a calm I know.
@@ -1705,7 +1651,7 @@ cuz I want you here.
 Beside me.`
   },
   {
-    id: 71,
+    id: 69,
     title: "Habit",
     content: `I keep saying your name in my head,
 like a habit I don't try to stop.
@@ -1718,7 +1664,7 @@ you're the one I keep looking for
 even in the middle of nothing.`
   },
   {
-    id: 72,
+    id: 70,
     title: "She's Her",
     content: `She smiles like it's nothing
 but you can feel it
@@ -1745,7 +1691,7 @@ She's HER
 She's my woman`
   },
   {
-    id: 73,
+    id: 71,
     title: "Alone",
     content: `I used to say I'm fine alone,
 like I don't need anyone close.
@@ -1763,7 +1709,7 @@ I stopped walking away from love
 the moment I found you.`
   },
   {
-    id: 74,
+    id: 72,
     title: "Careful",
     content: `We didn't rush into anything
 just sat there,
@@ -1792,7 +1738,7 @@ like holding something
 we both don't want to lose.`
   },
   {
-    id: 75,
+    id: 73,
     title: "Appreciate",
     content: `Sometimes I think about how nothing in life is really guaranteed—not tomorrow, not the plans we make, not even how long certain moments last. Maybe that's why I've learned to appreciate what we have more.
 
@@ -1803,7 +1749,7 @@ I want you to know that my love for you isn't something that disappears easily. 
 So wherever life takes us, I'll stay beside you as long as you want me there. Not because I have to, but because I truly want to.`
   },
   {
-    id: 76,
+    id: 74,
     title: "Trust and Honesty",
     content: `I've been thinking about how love works. It's not really about perfect timing or having a perfect past. It's more about trust—choosing each other and being honest about what we feel.
 
@@ -1812,7 +1758,7 @@ Whatever happened before we met doesn't change how I see you. Your past is part 
 Loving you was never something I had to force. It's just something that feels natural to me. And even if things around us change, or life becomes uncertain at times, my feelings for you stays.`
   },
   {
-    id: 77,
+    id: 75,
     title: "Revolves Around You",
     content: `I realize how much of my day quietly revolves around you. Not in a way that takes away from everything else, but in the small ways that make ordinary moments feel better. Like how mornings feel lighter when I know I'll hear from you, or how the day feels complete when we get to talk or be together.
 
@@ -1823,7 +1769,7 @@ I hope you know that I see you for who you are, and I appreciate you more than I
 And wherever things go from here, I'm still here with you, choosing you the same way every day.`
   },
   {
-    id: 78,
+    id: 76,
     title: "Believe in Love",
     content: `For a long time, I thought love was something people talked about more than something that truly lasted. It always seemed easier to keep a little distance and focus on the things I could control. In a way, I convinced myself that staying careful was the safest choice.
 
@@ -1834,7 +1780,7 @@ Somehow, you became the person who made me believe that love can actually exist 
 And because of that, I'm not afraid of loving you or staying beside you. My love for you isn't something that will disappear easily.`
   },
   {
-    id: 79,
+    id: 77,
     title: "Turning Point",
     content: `Sometimes I think about how strange life is—how people can live their own separate stories until one day they cross paths and suddenly things feel different.
 
@@ -1847,7 +1793,7 @@ I didn't know who you were before we met, but now that you're here, I'm grateful
 And wherever life takes us next, I'll still be here beside you—saving a place for you in my life.`
   },
   {
-    id: 80,
+    id: 78,
     title: "Staying Sincerely",
     content: `Loving someone isn't always about everything being easy. Sometimes it means learning, adjusting, and understanding each other along the way. I know we're both still figuring things out—about life, about ourselves, and about what the future might look like.
 
@@ -1858,7 +1804,7 @@ So if there are moments when life feels uncertain or when we both need time to t
 Because loving you, to me, means staying—not perfectly, but sincerely.`
   },
   {
-    id: 81,
+    id: 79,
     title: "My Wife",
     content: `My Wife,
 
