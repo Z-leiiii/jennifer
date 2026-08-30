@@ -566,19 +566,6 @@ const handleSwipe = () => {
    MOBILE
 ======================================== */
 
-@media (max-width: 1024px) {
-
-  .book-content {
-    max-width: 700px;
-    padding: 2.5rem 2rem;
-  }
-
-  .cover-image {
-    max-height: 65vh;
-  }
-
-}
-
 @media (max-width: 768px) {
 
   .book-header {
@@ -592,7 +579,10 @@ const handleSwipe = () => {
   .book-content {
     padding: 1.5rem 1rem;
     width: 95%;
-    max-width: none;
+  }
+
+  .chapter-title {
+    font-size: 1.5rem;
   }
 
   .poem-text {
@@ -605,59 +595,6 @@ const handleSwipe = () => {
 
   .cover-image {
     max-height: 60vh;
-  }
-
-}
-
-@media (max-width: 480px) {
-
-  .book-header {
-    padding: 0.75rem;
-  }
-
-  .book-title {
-    font-size: 0.9rem;
-    letter-spacing: 0.1em;
-  }
-
-  .chapter-indicator {
-    font-size: 0.8rem;
-  }
-
-  .book-content {
-    padding: 1rem 0.75rem;
-    width: 98%;
-  }
-
-  .poem-text {
-    font-size: 0.9rem;
-    line-height: 1.8;
-  }
-
-  .table-of-contents {
-    padding: 3rem 0.75rem 0.75rem;
-  }
-
-  .table-of-contents h2 {
-    font-size: 1.5rem;
-  }
-
-  .toc-item {
-    padding: 0.75rem 1rem;
-    gap: 1rem;
-  }
-
-  .chapter-number {
-    font-size: 1rem;
-    min-width: 1.5rem;
-  }
-
-  .chapter-title {
-    font-size: 1rem;
-  }
-
-  .cover-image {
-    max-height: 50vh;
   }
 
 }
