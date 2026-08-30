@@ -1,4 +1,3 @@
-```vue
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { bookData, type Poem } from '../bookData'
@@ -470,7 +469,7 @@ const handleSwipe = () => {
 
   margin: 0 auto;
 
-  width: 100%;
+  width: 90%;
 
   display: flex;
 
@@ -560,7 +559,7 @@ const handleSwipe = () => {
 
   max-width: 800px;
 
-  max-height: 80vh;
+  max-height: 70vh;
 
   object-fit: contain;
 
@@ -574,29 +573,33 @@ const handleSwipe = () => {
 @media (max-width: 768px) {
 
   .book-header {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
   .book-title {
-    font-size: 1.2rem;
-  }
-
-  .book-content {
-    padding: 2rem 1.5rem;
-  }
-
-  .chapter-title {
-    font-size: 1.8rem;
-  }
-
-  .poem-text {
     font-size: 1.1rem;
   }
 
+  .book-content {
+    padding: 1.5rem 1rem;
+    width: 95%;
+  }
+
+  .chapter-title {
+    font-size: 1.5rem;
+  }
+
+  .poem-text {
+    font-size: 1rem;
+  }
+
   .table-of-contents {
-    padding: 5rem 1.5rem 2rem;
+    padding: 4rem 1rem 1rem;
+  }
+
+  .cover-image {
+    max-height: 60vh;
   }
 
 }
 </style>
-```
