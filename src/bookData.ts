@@ -1866,7 +1866,7 @@ In the near future, I might not be physically present.
 I might be a hundred and thousand miles away.
 I might be far from being alive.
 Yet,
-Even in quiet us, my heart will always remember how I love you,
+Even in quietus, my heart will always remember how I love you,
 Years, Decades, Centuries later.
 
 
