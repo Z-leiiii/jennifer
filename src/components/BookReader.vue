@@ -412,6 +412,7 @@ const handleSwipe = () => {
 
 .toc-item.active {
   color: rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 /* ========================================
