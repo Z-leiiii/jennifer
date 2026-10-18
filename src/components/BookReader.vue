@@ -1,11 +1,19 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { bookData, type Poem } from '../bookData'
+import type { Book, Poem } from '../libraryData'
+
+const props = defineProps<{
+  book: Book
+}>()
+
+const emit = defineEmits<{
+  back: []
+}>()
 
 const currentChapterIndex = ref(0)
 const showTableOfContents = ref(false)
 
-const chapters = bookData as Poem[]
+const chapters = props.book.chapters as Poem[]
 
 /*
  * The chapter index is controlled by our navigation functions,
@@ -131,6 +139,29 @@ const handleSwipe = () => {
           x2="21"
           y2="18"
         ></line>
+      </svg>
+    </button>
+
+    <!-- ========================================
+         BACK BUTTON
+    ========================================= -->
+
+    <button
+      class="back-button"
+      @click="emit('back')"
+      aria-label="Back to library"
+    >
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          d="M19 12H5M12 19l-7-7 7-7"
+        ></path>
       </svg>
     </button>
 
@@ -337,6 +368,45 @@ body,
 }
 
 .toc-button-floating svg {
+  width: clamp(20px, 4vw, 26px);
+  height: clamp(20px, 4vw, 26px);
+  display: block;
+}
+
+/* ========================================
+   BACK BUTTON
+======================================== */
+
+.back-button {
+  position: fixed;
+
+  top: clamp(0.5rem, 2vw, 1.25rem);
+
+  left: clamp(0.5rem, 2vw, 1.25rem);
+
+  z-index: 1000;
+
+  padding: clamp(0.4rem, 1vw, 0.6rem);
+
+  color: #3d2b1f;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease, background 0.2s ease;
+
+  background: #f5f0e6;
+
+  border: 1px solid #c4a574;
+
+  border-radius: 4px;
+}
+
+.back-button:hover {
+  color: #8b7355;
+  background: #e8e0d0;
+}
+
+.back-button svg {
   width: clamp(20px, 4vw, 26px);
   height: clamp(20px, 4vw, 26px);
   display: block;
