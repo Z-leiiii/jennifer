@@ -7,7 +7,7 @@ export interface Poem {
 export const bookData: Poem[] = [
   {
     id: 0,
-    title: "Cover",
+    title: "Book 1",
     content: "cover"
   },
   {
@@ -25,7 +25,7 @@ for my dearest, Jennifer.`
   },
   {
     id: 2,
-    title: "To Jennifer",
+    title: "Acknowledgement",
     content: `to my one and only wife, Jennifer, 
 who turned ordinary days into something worth remembering.
 Thank you for being my home, my calm, 
@@ -197,7 +197,7 @@ and still wanting to stay.`
   },
   {
     id: 7,
-    title: "I Will Stay",
+    title: "Stay",
     content: `If there are days
 with no words to hold,
 no answers,
@@ -225,7 +225,7 @@ Even now.`
   },
   {
     id: 8,
-    title: "Fear of Losing",
+    title: "Fear",
     content: `Still, there is this small ache
 I don't always confess.
 
@@ -292,11 +292,12 @@ someone I will always try
 to love well.
 
 `
-  },
-  {
+  },{
     id: 9,
     title: "Loving Awake",
-    content: `And if loss is ever written into the distance
+    content: `
+
+And if loss is ever written into the distance
 we cannot yet see,
 then let this moment be its answer:
 
@@ -402,7 +403,7 @@ is an act of courage—
 then let it be mine.`
   },
   {
-    id: 10,
+    id: 11,
     title: "Family",
     content: `I am afraid of the rooms
 your family lives in,
@@ -1669,35 +1670,9 @@ just this simple thing that doesn't change:
 you're the one I keep looking for
 even in the middle of nothing.`
   },
+  
   {
     id: 71,
-    title: "She's Her",
-    content: `She smiles like it's nothing
-but you can feel it
-
-She says simple things
-that sometimes don't match what she means
-
-She can be kind in the morning
-and distant by night
-
-She keeps her space, her pace
-and changes her mind like it's normal
-
-You think you figured her out
-then you realize you didn't
-
-Still, there's truth in her quiet
-even when she doesn't say it straight
-
-And somehow, she stays herself
-no matter what you think of her
-
-She's HER
-She's my woman`
-  },
-  {
-    id: 72,
     title: "Alone",
     content: `I used to say I'm fine alone,
 like I don't need anyone close.
@@ -1715,7 +1690,7 @@ I stopped walking away from love
 the moment I found you.`
   },
   {
-    id: 73,
+    id: 72,
     title: "Careful",
     content: `We didn't rush into anything
 just sat there,
@@ -1744,7 +1719,7 @@ like holding something
 we both don't want to lose.`
   },
   {
-    id: 74,
+    id: 73,
     title: "Appreciate",
     content: `Sometimes I think about how nothing in life is really guaranteed—not tomorrow, not the plans we make, not even how long certain moments last. Maybe that's why I've learned to appreciate what we have more.
 
@@ -1755,7 +1730,7 @@ I want you to know that my love for you isn't something that disappears easily. 
 So wherever life takes us, I'll stay beside you as long as you want me there. Not because I have to, but because I truly want to.`
   },
   {
-    id: 75,
+    id: 74,
     title: "Trust and Honesty",
     content: `I've been thinking about how love works. It's not really about perfect timing or having a perfect past. It's more about trust—choosing each other and being honest about what we feel.
 
@@ -1764,7 +1739,7 @@ Whatever happened before we met doesn't change how I see you. Your past is part 
 Loving you was never something I had to force. It's just something that feels natural to me. And even if things around us change, or life becomes uncertain at times, my feelings for you stays.`
   },
   {
-    id: 76,
+    id: 75,
     title: "Revolves Around You",
     content: `I realize how much of my day quietly revolves around you. Not in a way that takes away from everything else, but in the small ways that make ordinary moments feel better. Like how mornings feel lighter when I know I'll hear from you, or how the day feels complete when we get to talk or be together.
 
@@ -1775,7 +1750,7 @@ I hope you know that I see you for who you are, and I appreciate you more than I
 And wherever things go from here, I'm still here with you, choosing you the same way every day.`
   },
   {
-    id: 77,
+    id: 76,
     title: "Believe in Love",
     content: `For a long time, I thought love was something people talked about more than something that truly lasted. It always seemed easier to keep a little distance and focus on the things I could control. In a way, I convinced myself that staying careful was the safest choice.
 
@@ -1786,7 +1761,7 @@ Somehow, you became the person who made me believe that love can actually exist 
 And because of that, I'm not afraid of loving you or staying beside you. My love for you isn't something that will disappear easily.`
   },
   {
-    id: 78,
+    id: 77,
     title: "Turning Point",
     content: `Sometimes I think about how strange life is—how people can live their own separate stories until one day they cross paths and suddenly things feel different.
 
@@ -1799,7 +1774,7 @@ I didn't know who you were before we met, but now that you're here, I'm grateful
 And wherever life takes us next, I'll still be here beside you—saving a place for you in my life.`
   },
   {
-    id: 79,
+    id: 78,
     title: "Staying Sincerely",
     content: `Loving someone isn't always about everything being easy. Sometimes it means learning, adjusting, and understanding each other along the way. I know we're both still figuring things out—about life, about ourselves, and about what the future might look like.
 
@@ -1810,7 +1785,7 @@ So if there are moments when life feels uncertain or when we both need time to t
 Because loving you, to me, means staying—not perfectly, but sincerely.`
   },
   {
-    id: 80,
+    id: 79,
     title: "My Wife",
     content: `My Wife,
 
