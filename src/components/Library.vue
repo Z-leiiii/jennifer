@@ -1,27 +1,63 @@
-<script setup lang="ts">
-import type { Book } from '../libraryData'
 
-defineProps<{
-  books: Book[]
-}>()
+<script setup>
+import { ref, onMounted } from 'vue'
+import { supabase } from '../lib/supabase'
+import { localBooks, mergeBooks } from '../libraryData'
 
-const emit = defineEmits<{
-  selectBook: [book: Book]
-}>()
+const emit = defineEmits(['select-book', 'add-book'])
 
-const selectBook = (book: Book) => {
-  emit('selectBook', book)
+const books = ref([])
+const loading = ref(true)
+const errorMessage = ref('')
+
+async function fetchBooks() {
+  loading.value = true
+  errorMessage.value = ''
+
+  try {
+    const { data, error } = await supabase
+      .from('books')
+      .select('*')
+      .order('created_at', { ascending: false })
+
+    if (error) throw error
+
+    // Merge local books with Supabase books
+    books.value = mergeBooks(data || [])
+  } catch (error) {
+    errorMessage.value = error.message
+    // If Supabase fails, still show local books
+    books.value = localBooks
+  } finally {
+    loading.value = false
+  }
 }
+
+const selectBook = (book) => {
+  emit('select-book', book)
+}
+
+const showAddBook = () => {
+  emit('add-book')
+}
+
+onMounted(fetchBooks)
 </script>
+
 
 <template>
   <div class="library">
     <div class="library-header">
       <h1 class="library-title">The Library</h1>
       <p class="library-subtitle">A collection of words worth keeping</p>
+      <button class="add-book-button" @click="showAddBook">
+        + Add New Book
+      </button>
     </div>
 
-    <div class="books-grid">
+    <div v-if="loading" class="loading">Loading library...</div>
+    <div v-else-if="errorMessage" class="error">{{ errorMessage }}</div>
+    <div v-else class="books-grid">
       <div
         v-for="book in books"
         :key="book.id"
@@ -29,12 +65,12 @@ const selectBook = (book: Book) => {
         @click="selectBook(book)"
       >
         <div class="book-cover">
-          <img :src="book.coverImage" :alt="book.title" class="cover-image" />
+          <img :src="book.coverImage || book.cover_url || '/cover.jpg'" :alt="book.title" class="cover-image" />
         </div>
         <div class="book-info">
           <h2 class="book-title">{{ book.title }}</h2>
           <p class="book-author">by {{ book.author }}</p>
-          <p class="book-chapters">{{ book.chapters.length - 1 }} poems</p>
+          <p v-if="book.description" class="book-description">{{ book.description }}</p>
         </div>
       </div>
     </div>
@@ -54,6 +90,7 @@ const selectBook = (book: Book) => {
   margin-bottom: 3rem;
   padding-bottom: 2rem;
   border-bottom: 2px solid #c4a574;
+  position: relative;
 }
 
 .library-title {
@@ -69,6 +106,38 @@ const selectBook = (book: Book) => {
   color: #8b7355;
   margin: 0;
   font-style: italic;
+}
+
+.add-book-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.75rem 1.5rem;
+  background: #3d2b1f;
+  color: #f5f0e6;
+  border: 2px solid #c4a574;
+  border-radius: 4px;
+  font-family: 'Garamond', 'Georgia', 'Times New Roman', serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.add-book-button:hover {
+  background: #c4a574;
+  color: #3d2b1f;
+}
+
+.loading,
+.error {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #8b7355;
+  padding: 2rem;
+}
+
+.error {
+  color: #a12e28;
 }
 
 .books-grid {
@@ -133,12 +202,11 @@ const selectBook = (book: Book) => {
   font-style: italic;
 }
 
-.book-chapters {
+.book-description {
   font-size: 0.85rem;
   color: #a8915a;
   margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  line-height: 1.4;
 }
 
 /* Responsive */

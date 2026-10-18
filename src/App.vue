@@ -2,13 +2,12 @@
 import { ref } from 'vue'
 import Library from './components/Library.vue'
 import BookReader from './components/BookReader.vue'
-import { libraryData } from './libraryData'
-import type { Book } from './libraryData'
+import AddBook from './components/AddBook.vue'
 
-const currentView = ref<'library' | 'reader'>('library')
-const selectedBook = ref<Book | null>(null)
+const currentView = ref<'library' | 'reader' | 'add-book'>('library')
+const selectedBook = ref<any>(null)
 
-const selectBook = (book: Book) => {
+const selectBook = (book: any) => {
   selectedBook.value = book
   currentView.value = 'reader'
 }
@@ -17,18 +16,31 @@ const backToLibrary = () => {
   currentView.value = 'library'
   selectedBook.value = null
 }
+
+const showAddBook = () => {
+  currentView.value = 'add-book'
+}
+
+const bookAdded = () => {
+  currentView.value = 'library'
+}
 </script>
 
 <template>
   <Library
     v-if="currentView === 'library'"
-    :books="libraryData"
     @select-book="selectBook"
+    @add-book="showAddBook"
   />
   <BookReader
     v-else-if="currentView === 'reader' && selectedBook"
     :book="selectedBook"
     @back="backToLibrary"
+  />
+  <AddBook
+    v-else-if="currentView === 'add-book'"
+    @book-added="bookAdded"
+    @cancel="backToLibrary"
   />
 </template>
 
